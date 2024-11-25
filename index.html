@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penta Haven</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+
+<body>
+
+<!--HEADER/NAVBAR-->
+<div class = "navbar">
+  <nav>
+    <img src="Images/logo1.png" alt="Logo"> 
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="room.html">ROOMS</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <a href="sign-in.html">
+    <button class= "button">Sign In</button>
+    </a>
+  </nav>
+</div>
+
+  <!--ABOUT-->
+    <section class="about">
+      <div class="container flex">
+            <img src="Images/about.jpg" alt="">
+      </div>
+    </section>
+
+  <!--BOOKING-->
+    <section class="book">
+      <div class="container flexSpace">
+          <div class="text">
+              <h1><span> RESERVATION </span></h1>
+          </div>
+          <div class="form">
+              <form class="grid" id="bookingForm">
+                  <input type="text" name="dates" placeholder="Arrival - Departure Dates" readonly />
+                  <input type="number" placeholder="Adults">
+                  <input type="number" placeholder="Children">
+                  <input type="submit" value="CHECK AVAILABILITY">
+              </form>
+          </div>
+      </div>
+  </section>
+
+  <script>
+      $(document).ready(function() {
+          $('input[name="dates"]').daterangepicker({
+              opens: 'left',
+              autoUpdateInput: false
+          }, function(start, end) {
+              $('input[name="dates"]').val(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+          });
+
+          $('#bookingForm').on('submit', function(event) {
+              event.preventDefault();
+              const dateRange = $('input[name="dates"]').val();
+              const adults = $('input[placeholder="Adults"]').val();
+              const children = $('input[placeholder="Children"]').val();
+              alert('Selected Date Range: ' + dateRange + '\nAdults: ' + adults + '\nChildren: ' + children);
+          });
+      });
+  </script>
+
+  <!--HOME-->
+    <section class="home">
+      <div class="content">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <img src="Images/banner-1.png" alt="">
+            <div class="text">
+              <h1>Spend Your Holiday</h1>
+              <p>Penta Haven makes discovering and booking unforgettable stays around the world easy.
+              </p>
+              <div class="flex">
+                <a href="about.html">
+                <button class="primary-btn">SEE MORE</button>
+                </a>
+                <a href="contact.html">
+                <button class="secondary-btn">CONTACT US</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="Images/banner-2.png" alt="">
+            <div class="text">
+              <h1>Spend Your Holiday</h1>
+              <p>Discover and book your perfect getaway effortlessly with Penta Haven.
+              </p>
+              <div class="flex">
+                <a href="about.html">
+                <button class="primary-btn">SEE MORE</button>
+                </a>
+                <a href="contact.html">
+                <button class="secondary-btn">CONTACT US</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="Images/banner-3.png" alt="">
+            <div class="text">
+              <h1>Spend Your Holiday</h1>
+              <p>Penta Haven simplifies finding and booking your ideal stay anywhere in the world.
+              </p>
+              <div class="flex">
+                <a href="about.html">
+                <button class="primary-btn">SEE MORE</button>
+                </a>
+                <a href="contact.html">
+                <button class="secondary-btn">CONTACT US</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script>
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: true,
+        dots: false,
+        navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 1
+          },
+          1000: {
+            items: 1
+          }
+        }
+      })
+    </script>
+
+  <!--GALLERY-->
+  <section class="gallery">
+    <div class="container top">
+      <div class="heading">
+        <h1>PHOTOS</h1>
+        <h2>Our Gallery</h2>
+        <p>This section of Penta Haven showcases stunning images of the hotel's accommodations and amenities for potential guests.
+      </div>
+    </div>
+
+    <div class="content mtop">
+      <div class="owl-carousel owl-carousel1 owl-theme">
+        <div class="items">
+          <div class="img">
+            <img src="Images/gallery-1.JPG" alt="">
+          </div>
+          <div class="overlay">
+
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="Images/gallery-2.JPG" alt="">
+          </div>
+          <div class="overlay">
+
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="Images/gallery-3.JPG" alt="">
+          </div>
+          <div class="overlay">
+
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="Images/gallery-4.JPG" alt="">
+          </div>
+          <div class="overlay">
+
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="Images/gallery-5.JPG" alt="">
+          </div>
+          <div class="overlay">
+
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="Images/gallery-6.jpg" alt="">
+          </div>
+          <div class="overlay">
+
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="Images/gallery-1.JPG" alt="">
+          </div>
+          <div class="overlay">
+
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="Images/gallery-2.JPG" alt="">
+          </div>
+          <div class="overlay">
+
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="Images/gallery-3.JPG" alt="">
+          </div>
+          <div class="overlay">
+
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="Images/gallery-4.JPG" alt="">
+          </div>
+          <div class="overlay">
+
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="Images/gallery-5.JPG" alt="">
+          </div>
+          <div class="overlay">
+
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="Images/gallery-6.jpg" alt="">
+          </div>
+          <div class="overlay">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    $('.owl-carousel1').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: true,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 1000,
+      autoplayHoverPause: true,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 4,
+        },
+        1000: {
+          items: 6
+        }
+      }
+    })
+  </script>
+
+  <!--SERVICE-->
+    <section class="services top">
+      <div class="container">
+        <div class="heading">
+          <h1>SERVICES</h1>
+          <h2>Our Services</h2>
+          <p>This section highlights the range of amenities and offerings available to guests at Penta Haven.
+        </div>
+
+
+        <div class="content Flexspace">
+          <div class="left grid2">
+            <div class="box">
+              <div class="text">
+                <i class="fa-solid fa-champagne-glasses"></i>
+                <h3>Delious Food</h3>
+              </div>
+            </div>
+            <div class="box">
+              <div class="text">
+                <i class="fa-solid fa-person-biking"></i>
+                <h3>Fintness</h3>
+              </div>
+            </div>
+            <div class="box">
+              <div class="text">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Inhouse Restaurant</h3>
+              </div>
+            </div>
+            <div class="box">
+              <div class="text">
+                <i class="fa-solid fa-spa"></i>
+                <h3>Beauty Spa</h3>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <img src="Images/services.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!--FOOTER-->
+    <footer>
+      <div class="container grid">
+        <div class="box">
+          <div class="logo-text">
+          <img src="Images/logo1.png" alt="">
+          <p>Experience the perfect getaway where luxury meets comfort. At Penta Haven, we provide top-tier amenities, exquisite dining options, and tailored services to make your stay truly remarkable. Whether visiting for business or leisure, enjoy a seamless blend of tranquility and sophistication.</p>
+          </div>  
+        </div>
+
+        <div class="box">
+          <h2>Links</h2>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="room.html">Rooms</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h2>Contact Us</h2>
+          <i class="fa fa-location-dot"></i>
+          <label>University of the East - Caloocan </label> <br>
+          <i class="fa fa-phone"></i>
+          <label>09123456789</label> <br>
+          <i class="fa fa-envelope"></i>
+          <label>hotelbooking@gmail.com</label> <br>
+        </div>
+      </div>
+    </footer>
+
+    <div class="legal">
+      <p class="container">Copyright (c) 2024 All Rights Reserved.</p>
+    </div>
+
+  <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

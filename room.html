@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/room.css">
+    <title>Rooms</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <div class="topnav">
+        <header class="header">
+            <a href="">
+            <img class="nav-img" src="Images/logo1.png">
+            </a>
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li> <a href="index.html"> Home </a></li>
+                        <li> <a href="about.html"> About </a></li>
+                        <li> <a href="room.html"> Rooms </a></li>
+                        <li> <a href="contact.html"> Contact </a></li>
+                    </ul>    
+                </nav>
+        </header>
+    </div>
+
+    <!--ROOMS-->
+    <div class="container">
+        <h1>Rooms</h1>
+        <div class="room-list">
+            <!-- Standard Room -->
+            <div class="room">
+                <img src="Images/room1.JPG" alt="Standard Room">
+                <h2>Standard Room</h2>
+                <p>A cozy retreat featuring essential amenities like a queen bed, private bathroom, wardrobe, TV, and air conditioning—functional comfort without frills.</p>
+                <p>Price: ₱3,500/night</p>
+
+                <!-- Radio Buttons for View Selection -->
+                <div class="view-selection">
+                    <h3>Choose Your View</h3>
+                    <label>
+                        <input type="radio" name="view1" value="Ocean View"> Ocean View
+                    </label>
+                    <label>
+                        <input type="radio" name="view1" value="City View"> City View
+                    </label>
+                </div>
+
+                <div class="customization">
+                    <label for="bedding1">Bedding Type:</label>
+                    <select id="bedding1" onchange="updateImages('bedding1', 'beddingImage1')">
+                        <option value="">Select Bedding</option>
+                        <option value="Tencel Sheets">Tencel Sheets</option>
+                        <option value="Silk">Silk</option>
+                        <option value="Cotton">Cotton</option>
+                        <option value="Fitted Sheets">Fitted Sheets</option>
+                    </select>
+                    <img id="beddingImage1" src="" alt="Bedding" class="custom-image" style="display: none;">
+
+                    <label for="blanket1">Blanket Type:</label>
+                    <select id="blanket1" onchange="updateImages('blanket1', 'blanketImage1')">
+                        <option value="">Select Blanket</option>
+                        <option value="Fluffy Blanket">Fluffy Blanket</option>
+                        <option value="Fleece Blankets">Fleece Blankets</option>
+                        <option value="Knitted Blankets">Knitted Blankets</option>
+                        <option value="Comforter">Comforter Blanket</option>
+                    </select>
+                    <img id="blanketImage1" src="" alt="Blanket" class="custom-image" style="display: none;">
+
+                    <label for="pillow1">Pillow Type:</label>
+                    <select id="pillow1" onchange="updateImages('pillow1', 'pillowImage1')">
+                        <option value="">Select Pillow</option>
+                        <option value="Feather Pillows">Feather Pillows</option>
+                        <option value="Memory Foam Pillows">Memory Foam Pillows</option>
+                        <option value="Latex Pillow">Latex Pillow</option>
+                        <option value="Cotton Pillow">Cotton Pillow</option>
+                    </select>
+                    <img id="pillowImage1" src="" alt="Pillow" class="custom-image" style="display: none;">
+                </div>
+                <button onclick="bookRoom('Standard Room', 3500, 'bedding1', 'blanket1', 'pillow1', 1)">Book Now</button>
+            </div>
+
+            <!-- Deluxe Room -->
+            <div class="room">
+                <img src="Images/room2.JPG" alt="Deluxe Room">
+                <h2>Deluxe Room</h2>
+                <p>Enjoy extra space and premium furnishings in this stylish room, complete with a queen bed, TV, private bathroom, a cozy couch with a desk, air conditioning, and a balcony—luxury that won’t break the bank.</p>
+                <p>Price: ₱8,000/night</p>
+
+                <!-- Radio Buttons for View Selection -->
+                <div class="view-selection">
+                    <h3>Choose Your View</h3>
+                    <label>
+                        <input type="radio" name="view2" value="Ocean View"> Ocean View
+                    </label>
+                    <label>
+                        <input type="radio" name="view2" value="City View"> City View
+                    </label>
+                </div>
+
+                <div class="customization">
+                    <label for="bedding2">Bedding Type:</label>
+                    <select id="bedding2" onchange="updateImages('bedding2', 'beddingImage2')">
+                        <option value="">Select Bedding</option>
+                        <option value="Tencel Sheets">Tencel Sheets</option>
+                        <option value="Silk">Silk</option>
+                        <option value="Cotton">Cotton</option>
+                        <option value="Fitted Sheets">Fitted Sheets</option>
+                    </select>
+                    <img id="beddingImage2" src="" alt="Bedding" class="custom-image" style="display: none;">
+
+                    <label for="blanket2">Blanket Type:</label>
+                    <select id="blanket2" onchange="updateImages('blanket2', 'blanketImage2')">
+                        <option value="">Select Blanket</option>
+                        <option value="Fluffy Blanket">Fluffy Blanket</option>
+                        <option value="Fleece Blankets">Fleece Blankets</option>
+                        <option value="Knitted Blankets">Knitted Blankets</option>
+                        <option value="Comforter">Comforter Blanket</option>
+                    </select>
+                    <img id="blanketImage2" src="" alt="Blanket" class="custom-image" style="display: none;">
+
+                    <label for="pillow2">Pillow Type:</label>
+                    <select id="pillow2" onchange="updateImages('pillow2', 'pillowImage2')">
+                        <option value="">Select Pillow</option>
+                        <option value="Feather Pillows">Feather Pillows</option>
+                        <option value="Memory Foam Pillows">Memory Foam Pillows</option>
+                        <option value="Latex Pillow">Latex Pillow</option>
+                        <option value="Cotton Pillow">Cotton Pillow</option>
+                    </select>
+                    <img id="pillowImage2" src="" alt="Pillow" class="custom-image" style="display: none;">
+                </div>
+                <button onclick="bookRoom('Deluxe Room', 8000, 'bedding2', 'blanket2', 'pillow2', 2)">Book Now</button>
+            </div>
+
+            <!-- Suite -->
+            <div class="room">
+                <img src="Images/room3.JPG" alt="Suite">
+                <h2>Suite</h2>
+                <p>Experience home-like comfort in a tailored space, including a king bed, an impressive 85-inch TV, a couch, coffee tables, a wardrobe, a bathtub, complimentary champagne, and access to the gym and pool, plus breakfast for two—perfect for those seeking a unique luxury getaway.</p>
+                <p>Price: ₱14,000/night</p>
+
+                <!-- Radio Buttons for View Selection -->
+                <div class="view-selection">
+                    <h3>Choose Your View</h3>
+                    <label>
+                        <input type="radio" name="view3" value="Ocean View"> Ocean View
+                    </label>
+                    <label>
+                        <input type="radio" name="view3" value="City View"> City View
+                    </label>
+                </div>
+                
+                <div class="customization">
+                    <label for="bedding3">Bedding Type:</label>
+                    <select id="bedding3" onchange="updateImages('bedding3', 'beddingImage3')">
+                        <option value="">Select Bedding</option>
+                        <option value="Tencel Sheets">Tencel Sheets</option>
+                        <option value="Silk">Silk</option>
+                        <option value="Cotton">Cotton</option>
+                        <option value="Fitted Sheets">Fitted Sheets</option>
+                    </select>
+                    <img id="beddingImage3" src="" alt="Bedding" class="custom-image" style="display: none;">
+
+                    <label for="blanket3">Blanket Type:</label>
+                    <select id="blanket3" onchange="updateImages('blanket3', 'blanketImage3')">
+                        <option value="">Select Blanket</option>
+                        <option value="Fluffy Blanket">Fluffy Blanket</option>
+                        <option value="Fleece Blankets">Fleece Blankets</option>
+                        <option value="Knitted Blankets">Knitted Blankets</option>
+                        <option value="Comforter">Comforter Blanket</option>
+                    </select>
+                    <img id="blanketImage3" src="" alt="Blanket" class="custom-image" style="display: none;">
+
+                    <label for="pillow3">Pillow Type:</label>
+                    <select id="pillow3" onchange="updateImages('pillow3', 'pillowImage3')">
+                        <option value="">Select Pillow</option>
+                        <option value="Feather Pillows">Feather Pillows</option>
+                        <option value="Memory Foam Pillows">Memory Foam Pillows</option>
+                        <option value="Latex Pillow">Latex Pillow</option>
+                        <option value="Cotton Pillow">Cotton Pillow</option>
+                    </select>
+                    <img id="pillowImage3" src="" alt="Pillow" class="custom-image" style="display: none;">
+                </div>
+                <button onclick="bookRoom('Suite', 14000, 'bedding3', 'blanket3', 'pillow3', 3)">Book Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/room.js"></script>
+</body>
+</html>
