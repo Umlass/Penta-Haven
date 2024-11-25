@@ -1,0 +1,167 @@
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../Images/bg.jpg');
+}
+
+/*NAVBAR*/
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 5px 80px;
+    background: #1d1d1d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.nav-img {
+    width: 60px;
+    padding-left: 10px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+.navbar a:hover {
+    color: rgb(176, 158, 110);
+    transition: ease;
+}
+
+/*ROOMS*/
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.room-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.room {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+    flex: 1 1 calc(30% - 40px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.room img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+}
+.view-selection {
+    margin: 15px 0;
+}
+
+.view-selection h3 {
+    margin: 0;
+}
+
+.view-selection label {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.view-selection input[type="radio"] {
+    margin-right: 5px;
+}
+.customization {
+    margin-top: 15px;
+}
+
+.customization img {
+    width: 75%; 
+    height: auto;
+    margin-top: 10px;
+}
+
+.room h2 {
+    color: #1d1d1d;
+}
+
+.room p {
+    color: #1d1d1d;
+}
+
+.customization {
+    margin: 10px 0;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+}
+
+select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #1d1d1d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #b09e6e;
+    color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .room {
+        flex: 1 1 calc(45% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .room {
+        flex: 1 1 calc(100% - 20px);
+    }
+
+    .customization img {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 18px;
+    }
+}

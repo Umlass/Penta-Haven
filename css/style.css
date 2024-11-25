@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 10px;
+  background-color: #1d1d1d;
+}
+  
+nav img {
+  width: 60px;
+}
+  
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+  
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+  
+nav ul li a:hover {
+  color: rgb(176, 158, 110);
+  transition: .3s;
+}
+  
+button {
+  border: none;
+  background: rgb(176, 158, 110);
+  padding: 12px 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1d1d1d;
+  transition: 0.3s ease;
+}
+
+/*--------about---------*/
+.about {
+  margin: 0;
+  width: 100%; 
+  height: 90vh; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden; 
+}
+
+.about img {
+  width: 250vh;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/*--------about---------*/
+/*--------book---------*/
+
+.flexSpace {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book h1 {
+  padding-top: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 40px;
+}
+
+input {
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+.book {
+  padding: 40px 0;
+  background: #1d1d1d;
+  color: #fff;
+}
+
+h1 {
+  font-family: serif;
+}
+
+.book h1 {
+  padding-left: 100px;
+  font-size: 28px;
+}
+
+.book h1 span {
+  color: rgb(176, 158, 110);
+}
+
+.book input {
+  padding: 20px;
+}
+
+.book input:nth-last-child(1) {
+  background: rgb(176, 158, 110);
+  color: #fff;
+}
+
+/*--------book---------*/
+/*--------home---------*/
+.home {
+  height: 100vh;
+  color: #fff;
+}
+
+.home img {
+  width: 100%;
+  height: 100vh;
+}
+
+.home .text {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+}
+
+.home .text h1 {
+  font-size: 80px;
+  font-family: serif;
+  font-weight: 400;
+}
+
+.home p {
+  margin: 20px 0;
+}
+
+.home button {
+  margin-right: 20px;
+}
+
+.home button:hover {
+  background: #1d1d1d;
+  color: #fff;
+  cursor: pointer;
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+  position: absolute;
+  top: 40%;
+  height: 50px;
+  width: 50px;
+  background: rgb(176, 158, 110) !important;
+  color: #1d1d1d;
+}
+
+.owl-nav .owl-prev {
+  left: 0;
+}
+
+.owl-nav .owl-next {
+  right: 0;
+}
+
+/*--------home---------*/
+
+/*--------gallery---------*/
+
+.heading {
+  padding: 50px;
+}
+
+.heading h1 {
+  font-size: 100px;
+  font-weight: 500;
+  opacity: 0.1;
+  position: absolute;
+  top: -30px;
+}
+
+.heading h2 {
+  margin: 30px 0;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+.gallery .heading h1 {
+  top: 55px;
+}
+
+.gallery  .left {
+  margin-top: 30px;
+}
+
+.gallery {
+  position: relative;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery .img {
+  position: relative;
+}
+
+.gallery .img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(176, 158, 110);
+  width: 260px;
+  height: 257px;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  padding: 30px;
+}
+
+.overlay {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: 0.5s;
+}
+.gallery .items:hover .overlay,
+.gallery .items:hover .img::after {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.gallery .owl-nav .owl-prev {
+  left: 85%;
+}
+
+.gallery .owl-nav .owl-next {
+  right: 5%;
+}
+
+.gallery .owl-nav .owl-next,
+.gallery .owl-nav .owl-prev {
+  top: -40%;
+}
+
+/*--------gallery---------*/
+/*--------services---------*/
+
+.heading h1 {
+  font-size: 100px;
+  font-weight: 500;
+  opacity: 0.1;
+  position: absolute;
+  top: -30px;
+}
+
+.heading h2 {
+  margin: 30px 0;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+.services .heading h1 {
+  top: 55px;
+}
+
+.services  .left {
+  margin-top: 30px;
+}
+
+
+.Flexspace {
+  display: flex;
+  padding: 60px;
+  justify-content: space-between;
+}
+
+.services {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.services .left {
+  padding: 30px 0;
+}
+
+.services .box {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.5s;
+  padding: 10px;
+}
+
+.services .box .text {
+  padding: 90px 50px;
+  border: 1px dashed #fff;
+}
+
+.services i {
+  font-size: 50px;
+  color: rgb(176, 158, 110);
+  transition: 0.5s;
+}
+
+.services h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 20p;
+  transition: 0.5s;
+}
+
+.services img {
+  width: 850px;
+  height: 550px;
+  padding-right: 80px;
+}
+
+.services .box:hover {
+  background: rgb(176, 158, 110);
+  color: #fff;
+  cursor: pointer;
+}
+
+.services .box:hover i,
+.services .box:hover h3 {
+  color: #fff;
+}
+
+/*--------services---------*/
+/*--------footer---------*/
+footer {
+  background: #1d1d1d;
+  color: #b6b7b9;
+  padding: 10% 0 5% 0;
+}
+
+footer .logo-text {
+  display: flex;
+  align-items: center; /* Aligns the logo and text vertically */
+}
+
+footer .logo-text img {
+  margin-right: 15px; /* Adds space between the logo and the text */
+}
+
+footer .grid {
+  padding: 50px;
+  grid-template-columns: 6fr 3fr 3fr;
+}
+
+footer p {
+  color: #b6b7b9;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+footer h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+footer li {
+  margin-bottom: 20px;
+}
+
+footer li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer li a:hover {
+  color: rgb(176, 158, 110);
+  text-decoration: none;
+}
+
+footer i {
+  color: rgb(176, 158, 110);
+  margin: 20px 0;
+  margin-right: 20px;
+}
+
+footer label {
+  margin: 20px 0;
+}
+
+.legal {
+  padding: 15px 40px;
+  background: #1d1d1d;
+  color: #b6b7b9;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
